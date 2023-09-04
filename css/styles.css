@@ -8,6 +8,7 @@
   --grey: rgba(46, 47, 66, 0.7);
   --iconcolor: #afb1b8;
   --green: #31d0aa;
+  --navy-blue-modal: rgba(46, 47, 66, 0.40);
 }
 
 /* Standard Body CSS */
@@ -606,7 +607,7 @@ footer .logo-span {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   transform: scale(100%);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -616,7 +617,6 @@ footer .logo-span {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transform: scale(0%);
 }
 
@@ -631,6 +631,68 @@ footer .logo-span {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
+  color: var(--navyblue);
+  
+}
+
+.form-field {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: var(--navyblue);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--navy-blue-modal);
+}
+
+.form-field:hover input,
+.form-text-area:hover textarea {
+  border: 1px solid var(--iris);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:hover svg {
+  fill: var(--iris);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus,
+.text-area:focus {
+  outline: none;
+  border: 1px solid var(--iris);
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .modal-icon {
+  fill: var(--iris);
 }
 
 .btn-modal {
@@ -647,6 +709,67 @@ footer .logo-span {
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
+}
+
+.text-area {
+  display: block;
+  resize: none;
+  margin: 0;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: var(--navyblue);
+}
+
+.terms-and-conditions {
+  display: flex;
+  margin-top: 16px;
+}
+
+.terms-and-conditions-span {
+  margin-left: 10px;
+  margin-bottom: 16px;
+}
+
+.modal-submit {
+  display: flex;
+  padding: 10px 52px;
+  font-family: inherit;
+  margin: 0 auto;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--iris);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: 0;
+}
+
+.modal-submit:hover,
+.modal-submit:focus {
+  background-color: var(--ocean);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box {
+  cursor: pointer;
+}
+
+.check-box:checked {
+  accent-color: var(--iris);
+  border-color: transparent;
+  outline-color: var(--iris);
+  transition:  accent-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal:hover {
