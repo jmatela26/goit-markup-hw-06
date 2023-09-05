@@ -718,7 +718,7 @@ footer .logo-span {
   height: 40px;
   padding-left: 42px;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: text;
   border: 1px solid var(--navy-blue-modal);
 }
 
